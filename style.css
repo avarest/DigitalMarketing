@@ -63,7 +63,7 @@ body{
   }
   .btn-color{
       background: #29d8db;
-      color: white
+      color: white;
   }
   
 
@@ -151,6 +151,7 @@ body{
     }
     .break-line{
         margin: 0 auto;
+        width: 20%;
     }
     .about-heading{
         text-align: center;
