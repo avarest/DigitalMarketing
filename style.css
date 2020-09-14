@@ -65,6 +65,9 @@ body{
       background: #29d8db;
       color: white;
   }
+  .bold{
+      font-weight: bold;
+  }
   
 
 /* Home section style */
@@ -130,6 +133,59 @@ body{
 .work-details{
     text-align: center;
     line-height: 30px;
+}
+.card-home{
+    background-color:#fff;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.05);
+    border-radius: 18px 18px 18px 18px;
+    border: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.card-p{
+    line-height: 30px;
+}
+.pay-amount{
+    background: #29d8db;
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+    font-size: 15px;
+    padding: 12px 24px;
+}
+
+/* Packages styles */
+.package-section{
+    background-image: url('https://instantbluetick.com/wp-content/uploads/2020/01/Yer-1.png');
+    background-position: top center;
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+.package-overlay{
+
+}
+.package-box{
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0px 0px 42px 1px rgba(0,0,0,0.5);
+}
+.package-head{
+    background-color: #191935;
+    padding: 20px 20px 20px 20px;
+    text-align: center;
+}
+.package-price{
+    background: #fff;
+}
+.package-amount{
+    border-radius: 555px 555px 555px 555px;
+    background: #29d8db;
+    color: white;
+    font-size: 15px;
+    padding: 12px 24px;
+}
+.package-head-celeb{
+    background-color: #0000ff;
+    padding: 20px 20px 20px 20px;
+    text-align: center;
 }
 
 
