@@ -457,7 +457,7 @@ body{
 /* whatsap widget */
 .whatsapp{
     position: fixed;
-    bottom: 20px;
+    bottom: 30px;
     left: 10px;
     cursor: pointer;
     z-index: 99999999;

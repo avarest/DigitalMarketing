@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap-4.5.0-dist/css/bootstrap.min.css">
     <title>BoomDyno</title>
+    <!-- favicon -->
+    <link rel='icon' href='img/fav.svg' type='image/x-icon' sizes="16x16" />
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!-- icons -->
@@ -20,7 +22,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img class="d-inline-block align-top" alt="" loading="lazy" src="img/logo.jpg" width="80" height="50" />
+                <img class="d-inline-block align-top" alt="" loading="lazy" src="img/logo.svg" width="120" height="50" />
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -76,7 +78,7 @@
                                 <div class="form-group">
                                     <textarea class="form-control input-style" placeholder="Message" id="message" rows="3" required></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-color">Verify Now !</button>
+                                <button type="submit" class="btn btn-color" id="verify">Verify Now !</button>
                             </form>
                         </div>
                     </div>
@@ -496,7 +498,7 @@
             <hr class="mt-3" style="width: 10%; margin: 0 auto; "/>
             <p class="text-center mt-4">We have high standards, there is a reason that our service is being used by hundreds of famous influencers and celebrities. We always will give our best.Call now!</p>
             <div class="text-center mt-5 mb-4">
-                <a class="call-style" style="color: white;">Call Now !</a>
+                <a class="call-style" href="tel:+1(775)549-5997" style="color: white; text-decoration: none;">Call Now !</a>
             </div>
 
             <div class="googleMap mt-5" id="contact">
@@ -512,7 +514,7 @@
             <div class="row">
                 <div class="col-lg-3 mb-4">
                     <div class="text-center text-md-left">
-                        <img src="img/logo.jpg" width="120" height="60" alt="logo">
+                        <img src="img/logo.svg" width="120" height="60" alt="logo">
                     </div>
                 </div>
                
@@ -578,6 +580,7 @@
 <script>
     $(document).ready(function(){
        
+       
         $("form").submit(function(event) { 
             event.preventDefault();
 
@@ -605,10 +608,12 @@
                 contentType: "application/json; charset=utf-8",
                 dataType: 'json',
                 beforeSend: function(jqXHR, settings) {
-                    //  $('#fundCard').addClass("mdi mdi-loading mdi-spin");
+                     $('#verify').addClass("mdi mdi-loading mdi-spin");
+                     $('#verify').attr("disabled", true)
                 },
                 success: function(data) {
-                    // $('#fundCard').removeClass("mdi mdi-loading mdi-spin"); 
+                    $('#verify').removeClass("mdi mdi-loading mdi-spin"); 
+                    $('#verify').attr("disabled", false)
                     iziToast.success({
                         message: 'Message successfully sent.',
                         progressBar: false,
@@ -621,12 +626,9 @@
                     $('#message').val('');
                     $('#phone').val('');
                 },
-                error: function(data) 
-                    {
-                        // $('#fundCard').removeClass("mdi mdi-loading mdi-spin");
-                    },
                 complete: function(jqXHR) {
-                  
+                    $('#verify').removeClass("mdi mdi-loading mdi-spin");
+                    $('#verify').attr("disabled", false)
                 }
               })           
         })
