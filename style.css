@@ -155,7 +155,7 @@ body{
 
 /* Packages styles */
 .package-section{
-    background-image: url('https://instantbluetick.com/wp-content/uploads/2020/01/Yer-1.png');
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://instantbluetick.com/wp-content/uploads/2020/01/Yer-1.png');
     background-position: top center;
     background-size: cover; 
     background-repeat: no-repeat;
@@ -188,6 +188,27 @@ body{
     text-align: center;
 }
 
+
+/* Google MApp styles */
+.googleMap{
+    position: relative;
+    height: 0;
+    padding-bottom: 50%;
+  }
+  
+  .googleMap iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .call-style{
+    color: #ffffff;
+    background-color: #29d8db;
+    border-radius: 10px 10px 10px 10px;
+    padding: 20px 35px 20px 35px;
+  }
 
 
 
