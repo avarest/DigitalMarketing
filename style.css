@@ -108,7 +108,8 @@ body{
     margin-top: 100px;
 }
 .home-title{
-    line-height: 60px;
+    line-height: 50px;
+    /* margin-top: 70px; */
 }
 
 /* about section */
@@ -478,6 +479,7 @@ body{
         text-align: center;
         font-size: 30px;
         line-height: 40px;
+        margin-bottom: 80px;
     }
     .break-line{
         margin: 0 auto;
