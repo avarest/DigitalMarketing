@@ -522,6 +522,9 @@ li{
 /* Media query */
 
 @media (max-width: 767px) { 
+  .card-home{
+    height: auto;
+  }
     .home-heading{
         margin-top: 20px;
         text-align: center;
