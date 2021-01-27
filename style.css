@@ -491,6 +491,30 @@ body{
   color: white;
 } 
 
+/* payment options styles */
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  fill: currentColor;
+}
+.payment-icon{
+  margin-right: 5px;
+}
+.payment-icons .icon {
+    width: 30px;
+    height: 30px;
+}
+li{
+  list-style: none;
+}
+.list--inline>li {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
 
 
 
